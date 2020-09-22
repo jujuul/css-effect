@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 15px;
+        }
+
+        body {
+            background: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            font-family: Helvetica;
+            margin: 0;
+            padding: 0;
+            font-size: 8rem;
+            letter-spacing: 0rem;
+            position: relative;
+        }
+
+        h1::after {
+            content: attr(data-sportlight);
+            color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+            clip-path: ellipse(100px 100px at 0% 50%);
+            animation: sportlight 5s infinite;
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/44691899115501.5eeb70d637af1.jpg);
+            background-size: 150%;
+            background-position: center center;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        @keyframes sportlight {
+            0% {
+                -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+                clip-path: ellipse(100px 100px at 0% 50%);
+            }
+
+            50% {
+                -webkit-clip-path: ellipse(100px 100px at 100% 50%);
+                clip-path: ellipse(100px 100px at 100% 50%);
+            }
+
+            100% {
+                -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+                clip-path: ellipse(100px 100px at 0% 50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 data-sportlight="jujuulCoding">jujuulCoding</h1>
+</body>
+
+</html>
